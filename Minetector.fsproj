@@ -6,6 +6,7 @@
     <SelfContained>true</SelfContained>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Log.fs" />
     <Compile Include="Environment.fs" />
     <Compile Include="Minetector.fs" />
     <Compile Include="Program.fs" />
