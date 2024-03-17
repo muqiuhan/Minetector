@@ -18,12 +18,6 @@ let check_server_path (path: string) : unit =
 
 [<EntryPoint>]
 let main (argv: array<string>) : int =
-    match argv with
-    | [| server_path |] ->
-        if IO.Directory.Exists(server_path) then
-            check_server_path server_path
-            Minetector(server_path).Start()
-            0
-        else
-            failwith $"Cannot find server in {server_path}"
-    | _ -> failwith "Please give me the server path"
+    check_server_path "."
+    Minetector(server_path).Start()
+    0
